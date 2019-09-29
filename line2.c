@@ -69,8 +69,10 @@ void drawline(){
         dy = t;
         swap = 1;
     }
-
-    writepixel(x,y,cond);
+    if(swap)
+            writepixel(y,x,cond);
+        else
+            writepixel(x,y,cond);
     while(x<end)
     {
         if(p<0)
