@@ -118,6 +118,7 @@ void drawViewPort(){
 }
 
 void display(){
+    int ox0 = x0,oy0 = y0, ox1 = x1,oy1 = y1;
     glClear(GL_COLOR_BUFFER_BIT);
     // draw the originals
     glColor3f(1.0,0.0,0.0);
@@ -129,6 +130,11 @@ void display(){
     CSL();
     drawViewPort();
     glFlush();
+
+    x0 = ox0;
+    y0 = oy0;
+    x1 = ox1;
+    y1 = oy1;
 }
 
 
